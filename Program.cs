@@ -63,8 +63,6 @@ using RelacionamentosEntreObjetos;
 //         };
 
 //         Console.WriteLine("--- Cálculo de Fretes ---");
-
-//         // Utilizando foreach para apresentar o valor do frete de cada uma
 //         foreach (Entrega entrega in listaDeEntregas)
 //         {
 //             Console.WriteLine($"Distância: {entrega.Distancia} km");
@@ -72,17 +70,82 @@ using RelacionamentosEntreObjetos;
 //         }
 
 
-Relatorio meuRelatorio = new Relatorio();
-        Contrato meuContrato = new Contrato();
+//Relatorio meuRelatorio = new Relatorio();
+//Contrato meuContrato = new Contrato();
 
-        Console.WriteLine("--- Ações do Relatório ---");
+//Console.WriteLine("--- Ações do Relatório ---");
         
-        meuRelatorio.Imprimir(); 
-        meuRelatorio.Exportar(); 
+//meuRelatorio.Imprimir(); 
+//meuRelatorio.Exportar(); 
 
-        Console.WriteLine("\n--- Ações do Contrato ---");
+//Console.WriteLine("\n--- Ações do Contrato ---");
         
-        meuContrato.Imprimir();
+//meuContrato.Imprimir();
+
+
+//Notebook meuNotebook = new Notebook("mac book air", "676767", 16);
+//Smartphone meuSmartphone = new Smartphone("iPhone 15 Pro", "IMEI-123456", 256);
+
+//Console.WriteLine("--- Informações do Notebook ---");
+//meuNotebook.ExibirInformacoes();
+
+//Console.WriteLine("\n--- Informações do Smartphone ---");
+//meuSmartphone.ExibirInformacoes();
+
+// List<Animal> animais = new List<Animal>
+//         {
+            
+//             new Cachorro("Snow"),
+//             new Gato("Tom"),
+//             new Passaro("flamengo")
+//         };
+
+//         Console.WriteLine("--- Apresentação dos Animais ---");
+
+//         foreach (Animal animal in animais)
+//         {
+//             animal.Apresentar();
+//             animal.EmitirSom();
+//             Console.WriteLine("-------------------");
+//         }
+
+
+
+
+        // IArmazenavel sistemaArmazenamento;
+
+        // Console.WriteLine("Arquivo de Texto");
+        
+        // sistemaArmazenamento = new ArquivoTexto();
+
+        // sistemaArmazenamento.Salvar("Registo de Logs");
+        // sistemaArmazenamento.Ler();
+
+        // Console.WriteLine("\nTeste com Banco de Dados");
+       
+        // sistemaArmazenamento = new BancoDados();
+        
+        // sistemaArmazenamento.Salvar("Ficha de Cliente");
+        // sistemaArmazenamento.Ler();
+
+
+
+        Hospedagem minhaHospedagem = new Hospedagem("Hotel Mar e Sol");
+        Consultoria minhaConsultoria = new Consultoria("Consultoria Financeira XP");
+
+        Console.WriteLine("---Teste de Contratos---");
+        
+        IContratavel servicoContratado;
+
+        servicoContratado = minhaHospedagem;
+        servicoContratado.Contratar(); 
+
+        servicoContratado = minhaConsultoria;
+        servicoContratado.Contratar(); 
+
+        Console.WriteLine("\n---Teste de Cancelamento---");
+        
+        minhaHospedagem.Cancelar();
 
 
 
